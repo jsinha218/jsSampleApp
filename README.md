@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the sample application for Ruby on Rails.
 
-Things you may want to cover:
+To get started with the app,clone the repo and install the required gems.
 
-* Ruby version
+update the gemfile to have postgres in production
 
-* System dependencies
+bundle install --without production
 
-* Configuration
+migrate the database:
 
-* Database creation
+rails db:migrate
 
-* Database initialization
+rails test
 
-* How to run the test suite
+rails server
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
