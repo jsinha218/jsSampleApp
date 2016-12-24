@@ -8,33 +8,33 @@ class StaticpagesControllerTest < ActionDispatch::IntegrationTest
   end  
 
   test "should get root" do
-    get root_url
+    get root_path
     assert_response :success
     assert_select "title","Home |#{@base_title}"
   end  
 
   test "should get home" do
-    get staticpages_home_url
+    get root_path
     assert_response :success
     ##access the string variable
     assert_select "title","Home |#{@base_title}"
   end
 
   test "should get help" do
-    get staticpages_help_url
+    get help_path
     assert_response :success
     assert_select "title","Help |#{@base_title}"
   end
 
   test "should get about" do
-    get staticpages_about_url
+    get about_path
     assert_response :success
     ##the below line checks the presence of a particular tag on page
     assert_select "title","About |#{@base_title}"
   end
 
   test "should get contact" do
-    get staticpages_contact_url
+    get contact_path
     assert_response :success
     ##the below line checks the presence of a particular tag on page
     assert_select "title","Contact |#{@base_title}"
